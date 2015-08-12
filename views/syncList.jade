@@ -1,0 +1,41 @@
+html
+	head
+		style
+			include ../public/components/bootstrap/dist/css/bootstrap.min.css
+		title Sync Lists
+	body
+		.container
+			.row
+				.col-xs-10.col-sm-10.col-md-10.col-lg-10
+					.panel.panel-default
+						.panel-heading
+							h3 Neuen Sync Regestrieren:
+						.panel-body
+								legend IDModel Hooken
+								.form-group
+									label(for='listid1') List-ID1:
+									input.form-control(name='list1' ,type='text', placeholder='Bsp.: 1234gasdc12351', value='5501a451ddf0b9e080db13ab')
+									label(for='listid2') List-ID1:
+									input.form-control(name='list2' ,type='text', placeholder='Bsp.: 1234gasdc12351', value='5501a44f680fb23ac935e477')
+									
+									p
+									button#regHookForm.btn.btn-primary Submit
+			.row
+				.col-xs-10.col-sm-10.col-md-10.col-lg-10
+					.panel.panel-default
+						.panel-heading
+							h3 Already Linked
+						.panel-body
+							div 
+								ul.list-group
+									each sync in data
+										ul.list-group
+											li.list-group-item.list-group-item-success= sync._id
+											li.list-group-item= sync.list1.name
+											li.list-group-item= sync.list2.name
+
+				
+		script
+			include ../public/components/jquery/dist/jquery.js
+			include ../public/components/bootstrap/dist/js/bootstrap.js
+			include ../public/js/sync.js

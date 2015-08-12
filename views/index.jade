@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	head
+		style
+			include ../public/components/bootstrap/dist/css/bootstrap.min.css
+		title NISSI
+	body
+		.container
+			h1= title
+			h2 Node List Sync Server Interface
+			.row
+				.col-xs-10.col-sm-10.col-md-10.col-lg-10
+					.panel.panel-default
+						.panel-heading
+							h3 Navigation
+						.panel-body
+							ul.list-group
+								li.list-group-item
+									a(href="/reg") Registration Page for Whatever Hook
+								li.list-group-item
+									a(href="/sync") Registration Page for new List Link
+								

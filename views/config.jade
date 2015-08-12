@@ -1,0 +1,35 @@
+html
+	head
+		style
+			include ../public/components/bootstrap/dist/css/bootstrap.min.css
+	body
+		.container
+			.row
+				.col-xs-10.col-sm-10.col-md-10.col-lg-10
+					.panel.panel-default
+						.panel-heading
+							h3 Configuration:
+						.panel-body
+							form(role='form', method='POST')
+								legend Syncronisation vorschlagen
+								.form-group
+									label(for='') Board:
+									input.form-control(type='text', placeholder='TestInput')
+									label(for='') List:
+									input.form-control(type='text', placeholder='TestInput')
+									label(for='') Destination Board:
+									input.form-control(type='text', placeholder='TestInput')
+									label(for='') Destination List:
+									input.form-control(type='text', placeholder='TestInput')
+									p
+									button.btn.btn-primary(type='submit') Submit
+			.row
+				.col-xs-10.col-sm-10.col-md-10.col-lg-10
+					.well.well-lg
+						a(href='http://sandbox2.webvariants.de/trello-dumper/dump.json') Der Letzte Request
+
+	
+		script
+			include ../public/components/jquery/dist/jquery.min.js
+			include ../public/components/bootstrap/dist/js/bootstrap.min.js
+			include ../public/js/config.js
